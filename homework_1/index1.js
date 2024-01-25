@@ -1,31 +1,14 @@
-function canSmoke(age) {
-  if (age < 18) {
-    return "та зачекай ти";
-  }
-  return "може все таки не треба";
-}
+console.log(typeof 12);
+console.log(typeof "12");
+console.log(typeof b);
+let a = null;
+console.log(typeof a);
+console.log(typeof null);
+console.log(typeof 142353452n);
+console.log(typeof new Object());
+console.log(typeof true);
 
-let exspressionCanSmoke = function (age) {
-  if (age < 18) {
-    return "та зачекай ти";
-  }
-  return "роби що хоч";
-};
-
-let arrowCanSmoke = (age) => {
-  if (age < 18) {
-    return "пізніш";
-  }
-  return "роби що хоч";
-};
-console.log(canSmoke(18));
-console.log(exspressionCanSmoke(18));
-console.log(arrowCanSmoke(17));
-
-function allowedTOIn(name, age, department) {
-  if (name == "Alexandria" && age >= 18 && department == "QA") {
-    return true;
-  }
-  return false;
-}
-console.log(allowedTOIn("Alexandria", 18, "QA"));
+let one = 15;
+let two = "15";
+console.log(one == two);
+console.log(one === two);
