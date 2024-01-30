@@ -18,7 +18,9 @@ console.log(isPolidrom("abamaba"));
 
 let getPaired = (arr) => {
   let newArr = arr.filter((e) => e % 2 == 0);
-  console.log(newArr);
+  let reversedArr = newArr.reverse();
+  return reversedArr;
 };
 
-getPaired(new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+let newReversedArr = getPaired(new Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+console.log(newReversedArr);
