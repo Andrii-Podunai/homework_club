@@ -6,7 +6,7 @@ test('get started link', async ({ page }) => {
 
   await page.locator('#slots-0 [data-test-id="call-to-action"]').click();
 
-  await expect(page).toHaveTitle(/Valentine's Day/);
+  await expect(page).toHaveTitle(/Shop All Running/);
 });
 
 test('enter text', async ({ page }) => {
@@ -30,12 +30,8 @@ await expect( page.getByText('LoginCreate accountEmail *')).toBeVisible();
 test('check filters', async ({ page }) => {
   await page.goto('https://us.puma.com/us/en');
 
-  await page.locator('div').filter({ hasText: /^Kids$/ }).getByRole('menuitem').hover;
-  await page.waitForTimeout(2000);
-
-  const linkKids = await page.getByLabel('Boys').getByRole('menuitem', { name: 'Classics' }).first();
-  await linkKids.waitFor();
-  await linkKids.click();
+  await page.locator('div').filter({ hasText: /^Kids$/ }).getByRole('menuitem').hover();
+  await page.getByLabel('Boys').getByRole('menuitem', { name: 'Classics' }).first().click();
 
 
   await page.getByRole('button', { name: 'Size' }).click();
